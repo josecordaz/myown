@@ -1,8 +1,28 @@
+<!DOCTYPE html>
 <html>
-<head>
-	<title>Prueba</title>
+<head app-ng="listaPersonas">
+	<title>Mi primer aplicación AngularJS</title>
+	<script src = "../../../libs/javascript/angular-1.2.20/angular.js"></script>
+	<script src="listaPersonas"></script>
+	<script type="text/javascript">
+		var size = 0, respSize = 0;    
+
+		setInterval(function(){
+			var sc = document.createElement('script');
+			// Ruta del proyecto
+			var path = "E:\\desarrollo\\angular\\ProAngularJS";
+			//var path = "I:\\desarrollo\\angular\\ProAngularJS";
+			//sc.src = "http://localhost:7734/reloadPage/backSize.js?path="+path;
+			sc.src = "http://localhost:7734/reloadPage/prueba.js?path="+path;
+			document.getElementsByTagName('head')[0].appendChild(sc);
+			if(respSize !== 0 && size != respSize){
+				location.reload();
+			}
+			respSize = size;
+		},100);
+	</script>
 </head>
 <body>
-	Hola
+
 </body>
 </html>
