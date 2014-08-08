@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
-<head app-ng="listaPersonas">
+<head ng-app="listaPersonas">
 	<title>Mi primer aplicación AngularJS</title>
-	<script src = "../../../libs/javascript/angular-1.2.20/angular.js"></script>
-	<script src="listaPersonas"></script>
-	<script type="text/javascript">
+	<script src = "angular.js"></script>
+	<script src = "listaPersonas.js"></script>
+	<script type = "text/javascript">
 		var size = 0, respSize = 0;    
 
-		setInterval(function(){
+		/*setInterval(function(){
 			var sc = document.createElement('script');
 			// Ruta del proyecto
 			var path = "E:\\desarrollo\\angular\\ProAngularJS";
@@ -19,10 +19,10 @@
 				location.reload();
 			}
 			respSize = size;
-		},100);
+		},100);*/
 	</script>
 </head>
-<body>
-
+<body ng-controller = "PersonasController as personaCtrl">
+{{personaCtrl.product.name}}
 </body>
 </html>
