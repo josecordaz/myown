@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html>
-<head ng-app="listaPersonas">
+<html ng-app="listaPersonas">
+<head>
 	<title>Mi primer aplicación AngularJS</title>
 	<script src = "angular.js"></script>
-	<script src = "listaPersonas.js"></script>
+	<script src = "app.js"></script>
 	<script type = "text/javascript">
 		var size = 0, respSize = 0;    
 
@@ -23,6 +23,8 @@
 	</script>
 </head>
 <body ng-controller = "PersonasController as personaCtrl">
-{{personaCtrl.product.name}}
+	<div>
+		{{personaCtrl.product.name}}
+	</div>
 </body>
 </html>
